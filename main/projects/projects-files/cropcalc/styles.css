@@ -1,0 +1,84 @@
+main {
+    position: relative;
+    background-color: #ffffff;
+}
+h1.logo{
+	font-size: 10em;
+	font-family: Arial, sans-serif;
+}
+select {
+	width: 100%;
+    padding-left: 7px;
+    height: 26px;
+}
+
+input {
+	width: 100%;
+	text-indent: 7px;
+}
+
+button {
+	width: 100%;
+}
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+
+option {
+	color: black;
+}
+.button-margin {
+	margin-top: 17.75px;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.jumbotron.vertical-center {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+.text-center {
+	text-align: center;
+}
+
+.no-br {
+	display: inline;
+}
+
+.label-black { 
+	bottom: 30px;
+    display: inline;
+    padding: .2em .6em .1em;
+    font-size: 75%;
+    font-weight: 50;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    color: black;
+    float: left;
+}
+

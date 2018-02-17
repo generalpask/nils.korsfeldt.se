@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async></script>
+		<!-- jQuery JS -->
+		<script src="../../../../../SCRIPTS/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<!-- Main Content -->
+		<main>
+			<!-- Main Inputs -->
+			<div class="jumbotron vertical-center" id="main_container">
+				<div class="container text-center">
+					<h3>THIS APP IS A WORK IN PROGRESS.<br>IT DOES NOT WORK YET</h3><br>
+					<h1 class="logo">CROPCALC</h1><br>
+					<div class="row">
+						<div class="col-lg-4 col-lg-offset-2 plane_size-selector">
+							<label for="plane_size" class="label-black">Size</label>
+							<select required id="plane_size" placeholder="Please select">
+								<option value disabled selected>Please select</option>
+								<option value='1/2.3"'>1/2.3" (6.17 &#215; 4.55mm)</option>
+								<option value='1/1.7"'>1/1.7" (7.60mm &#215; 5.70mm)</option>
+								<option value='2/3"'>2/3" (8.80mm &#215; 6x60mm)</option>
+								<option value="1">1" (12.80mm &#215; 9.60mm)</option>
+								<option value="4/3">4/3" (17.30mm &#215; 13.0mm)</option>
+								<option value="aps-c (Canon)">APS-C (Canon) (22.20mm &#215; 14.80mm)</option>
+								<option value="aps-c">APS-C (23.60 &#215; 15.60mm)</option>
+								<option value="aps-h">APS-H (27.90mm &#215; 18.60mm)</option>
+								<option value="gfx">GFX / X1D / 645z (43.80mm &#215; 30.90mm)</option>
+								<option value="6x4.5">6x4.5 (56.00mm &#215; 41.5mm)</option>
+								<option value="6x6">6x6 (56.00mm &#215; 56.00mm)</option>
+								<option value="6x7">6x7 (56.00mm &#215; 67.00mm)</option>
+								<option value="6x8">6x8 (56.00mm &#215; 77.00mm)</option>
+								<option value="6x9">6x9 (56.00mm &#215; 84.00mm)</option>
+								<option value='4x5"'>4x5" (101.60mm &#215; 127mm)</option>
+								<option value='8x10"'>8x10" (203.20mm &#215; 254mm)</option>
+							</select>
+						</div>
+						<div class="col-lg-1 mm-input">
+							<label for="mm" class="label-black">mm</label>
+							<form required>
+								<input id="mm" placeholder="50mm" ><!--style="width: 50px;"-->
+							</form>
+						</div>
+						<div class="col-lg-1 fstop-selector">
+							<label for="fstop" class="label-black">f-stop</label>
+							<select required id="fstop">
+								<option value="1.0" selected>f/1.0</option>
+								<option value="1.1">f/1.1</option>
+								<option value="1.2">f/1.2</option>
+								<option value="1.3">f/1.3</option>
+								<option value="1.4">f/1.4</option>
+								<option value="1.7">f/1.7</option>
+								<option value="1.8">f/1.8</option>
+								<option value="1.9">f/1.9</option>
+								<option value="2">f/2</option>
+								<option value="2.3">f/2.3</option>
+								<option value="2.6">f/2.6</option>
+								<option value="2.8">f/2.8</option>
+								<option value="3.4">f/3.4</option>
+								<option value="3.7">f/3.7</option>
+								<option value="4">f/4</option>
+								<option value="4.7">f/4.7</option>
+								<option value="5.2">f/5.2</option>
+								<option value="5.6">f/5.6</option>
+								<option value="6.7">f/6.7</option>
+								<option value="7.3">f/7.3</option>
+								<option value="8">f/8</option>
+								<option value="9.5">f/9.5</option>
+								<option value="10.4">f/10.4</option>
+								<option value="11.0">f/11.0</option>
+								<option value="13.0">f/13.0</option>
+								<option value="14.6">f/14.6</option>
+								<option value="16.0">f/16.0</option>
+							</select>
+						</div>
+						<div class="col-lg-2 no-br">
+							<button class="button-margin" style="background-color: blue; color: white;" onclick="calculate()">Calculate!</button>
+						</div>
+						<script>
+						
+						/*
+						
+						Use: H x W
+						All measurements are in millimeters
+
+						√
+
+						1/10" = √(1.28 * 1.28 + 0.96 * 0.96) = 1.6
+
+						1/8" = √(1.60 * 1.60 + 1.20 * 1.20) = 2
+
+						1/6" = √(2.40 * 2.40 + 1.80 * 1.80) = 3
+
+						1/4" = √(3.60 * 3.60 + 2.70 * 2.70) = 4.5
+
+						1/3.6" = √(4.00 * 4.00 + 3.00 * 3.00) = 5
+
+						1/3.2" = √(4.54 * 4.54 + 3.42 * 3.42) = 5.68
+
+						8mm = √(4.80 * 4.80 + 3.5 * 3.5) = 5.94
+
+						1/3" = √(4.80 * 4.80 + 3.60 * 3.60) = 6
+
+						1/2..7" = √(5.37 * 5.37 + 4.04 * 4.04) = 6.72
+
+						Super 8mm = √(5.79 * 5.79 + 4.01 * 4.01) = 7.04
+
+						1/2.5" √(5.76 * 5.76 + 4.29 * 4.29) = 7.18
+
+						1/2.3" = √(6.17 * 6.17 + 4.55 * 4.55) = 7.66
+						
+						1/2" = √(6.40 * 6.40 + 4.80 * 4.80) = 8.00
+						
+						1/1.8" = √(7.18 * 7.18 + 5.32 * 5.32) = 8.93
+						
+						1/1.7" = √(7.60 * 7.60 + 5.70 * 5.70) = 9.50
+						
+						1/1.6" = √(8.08 * 8.08 + 6.01 * 6.01) = 10.07
+						
+						2/3" = √(8.80 * 8.80 + 6.60 * 6.60) = 11.00
+						
+						16mm = √(10.26 * 10.26 + 7.49 * 7.49) = 12.70
+						
+						1/1.2" = √(10.67 * 10.67 + 8.00 * 8.00) = 13.33
+						
+						BMPCC & BMSC = √(12.48 * 12.48 + 7.02 * 7.02) = 14.32
+						
+						Super 16mm = √(12.52 * 12.52 + 7.41 * 7.41) = 14.54
+						
+						1" = √(13.20 * 13.20 + 8.80 * 8.80) = 15.86
+						
+						BMCCEF = √(15.81 * 15.81 + 8.88 * 8.88) = 18.13
+						
+						4/3" = √(17.30 * 17.30 + 13.00 * 13.00) = 21.60
+						
+						BMPC = √(21.12 * 21.12 + 11.88 * 11.88) = 24.23
+						
+						1.5" = √(18.70 * 18.70 + 14.00 * 14.00) = 23.36
+						
+						"35mm" 2 Perf = √(21.95 * 21.95 + 9.35 * 9.35) = 23.85
+						
+						Original Sigma Foveon X3 = √(20.70 * 20.70 + 13.80 * 13.80) = 24.90
+						
+						"Super 35mm" 2 Perf = √(9.35 * 9.35 + 24.89 * 24.89) = 26.58
+						
+						Canon EF-S, APS-C = √(22.30 * 22.30 + 14.90 * 14.90) = 26.82
+						
+						35mm "academy format" = √(22.00 * 22.00 + 16.00 * 16.00) = 27.20
+						
+						BM URSA / URSA Mini 4.6 = √(25.34 * 25.34 + 14.25 * 14.25) = 28.20
+						
+						APS-C (Canon EF-S, Sony α, Sony E, Nikon DX, Pentax K, Samsung NX, Fuji X) = √(23.60-23.70 * 23.60-23.70 + 15.60 * 15.60) = 28.20-28.40 (round to 28.30)
+						
+						"35mm 3 Perf" = √(24.89 * 24.89 + 13.86 * 13.86) = 28.48
+						
+						Super 35mm film 4 Perf = √(24.89 * 24.89 + 18.66 * 18.66) = 31.11
+						
+						Canon APS-H = √(27.90 * 27.90 + 18.60 * 18.60) = 33.50
+						
+						35mm full-frame = √(35.8-36 * 35.8-36 + 23.9-24 * 23.9-24) = 43.1-43.3 (round to 43.2)
+						
+						Leica S = √(45 * 45 + 30 * 30) = 54
+						
+						Pentax 645D, Hasselblad X1D-50c, CFV-50c, Fuji GFX 50S = √(44 * 44 + 33 * 33) = 55
+						
+						65mm = √(52.48 * 52.48 + 23.01 * 23.01) = 57.30
+						
+						Kodak KAF 39000 CCD = √(49 * 49 + 36.80 * 36.80) = 61.30
+						
+						Leaf AFi 10 = √(56 * 56 + 36 * 36) = 66.57
+						
+						Medium-format (Hasselblad H5D-60) = √(53.7 * 53.7 + 40.2 * 40.2) = 67.08
+						
+						Phase One P65+, IQ160, IQ180 = √(53.90 * 53.90 + 40.40 * 40.40) = 67.40
+						
+						6x4.5 = √(56 * 56 + 42 * 42) = 70
+						
+						6x6 = √(56 * 56 + 56 * 56) = 79
+						
+						6x7 = √(70 * 70 + 56 * 56) = 89.6
+						
+						IMAX = √(70.41 * 70.41 + 52.63 * 52.63) = 87.91
+						
+						6x8 = √(80 * 80 + 56 * 56) = 97.65
+						
+						6x9 = √(84 * 84 + 56 * 56) = 101
+
+						4x5" = √(102 * 102 + 127 * 127) = 164.01
+						43.27 / 164.01 = 0.26
+						
+						5x7" = √(178 * 178 + 127 * 127) = 210
+						
+						8x10" = √(200 * 200 + 260 * 260) = 328.02
+						43.27 / 328.02 = 0.13
+
+
+						35mm diagonal = a
+						<>35mm diagonal = b
+						35mm focal length = x
+						<>35mm equivalent = y
+
+						y = x * (a / b)
+						
+						*/
+						
+						
+						// Define crop factors
+						
+						function calculate() {
+							
+						}
+						</script>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

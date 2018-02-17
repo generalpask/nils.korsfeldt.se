@@ -1,0 +1,29 @@
+<pre>
+ __          ________ _      _____ ____  __  __ ______ 
+ \ \        / /  ____| |    / ____/ __ \|  \/  |  ____|
+  \ \  /\  / /| |__  | |   | |   | |  | | \  / | |__   
+   \ \/  \/ / |  __| | |   | |   | |  | | |\/| |  __|  
+    \  /\  /  | |____| |___| |___| |__| | |  | | |____ 
+     \/  \/   |______|______\_____\____/|_|  |_|______|
+     to the playground. This is a sandbox for testing elements, implements, styles, et cetera.
+</pre>
+<br>
+<script>
+	var spinners = [
+		"|/-\\",
+	];
+
+	for(var s=0; s<spinners.length; ++s) {
+		var spinner = spinners[s];
+		var el = document.createElement('div');
+		document.body.appendChild(el);
+
+		(function(spinner,el) {
+			var i = 0;
+			setInterval(function() {
+				el.innerHTML = spinner[i];
+				i = (i + 1) % spinner.length;
+			}, 150);
+		})(spinner,el);
+	}
+</script>
