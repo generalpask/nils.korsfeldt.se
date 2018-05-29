@@ -34,15 +34,31 @@ ul#horizontal-list li {
 
 li a {
     display: block;
-    colo: #000;
+    color: #000;
     padding: 8px 16px;
     text-decoration: none;
 }
-
 li a:hover {
     background-color: #af4003;
     color: #000;
 }
+li a:visited {
+	text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+
 
 .vertical-center {
 	display: flex;
@@ -70,4 +86,11 @@ div#playground-link {
   bottom: 0;
   position: relative;
   float: right;
+}
+
+.w3-panel {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+	margin-left: 16px!important;
+	margin-right: 1200px!important;
 }
