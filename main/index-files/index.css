@@ -1,23 +1,39 @@
-.main-font {
-	font-family: Georgia, "Times New Roman", Times, sans-serif;
+html, body {
+	text-align: left;
+	font-family: Verdana,sans-serif;
+	color: black;
+    background-color: #f3f2f2;
 }
 
-.menu {
+
+#header {
 	position: relative;
-	margin-bottom: -9px;
+	margin-bottom: -10px;
 	padding: 5px 5px 5px 5px;
-	padding-bottom: -10px;
 	background-color: #DE5307;
 }
 .logo {
 	margin-top: 5px;
 	margin-left: 5px;
 }
-h1.title {
+.title {
 	display: inline;
 	position: relative;
 	bottom: 32.5px;
-	left: 10px;
+	font-weight: 500!important;
+}
+.menu-nav {
+	display: inline!important;
+	position: absolute!important;
+	left: 116px;
+	bottom: 25px;
+}
+.menu-nav-item {
+	color: black;
+	
+}
+.menu-nav-item:hover {
+	background-color: #af4003;
 }
 
 ul {
@@ -81,7 +97,7 @@ div#playground-link {
   position:relative;
 }
 #twitterembed{
-  top: -192px;
+  top: -155px;
   right: 0; 
   bottom: 0;
   position: relative;
@@ -92,5 +108,5 @@ div#playground-link {
     margin-top: 16px!important;
     margin-bottom: 16px!important;
 	margin-left: 16px!important;
-	margin-right: 1200px!important;
+	margin-right: 1250px!important;
 }
