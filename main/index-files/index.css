@@ -5,6 +5,18 @@ html, body {
     background-color: #f3f2f2;
 }
 
+#main {
+	margin: 0;
+}
+#home {
+	margin: 0;
+}
+
+iframe {
+	height: 782.5px;
+	box-sizing: border-box;
+	marginwidth: 0px;
+}
 
 #header {
 	position: relative;
@@ -58,21 +70,11 @@ li a:hover {
     background-color: #af4003;
     color: #000;
 }
-li a:visited {
-	text-decoration: none;
-}
-a:link {
+
+a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
-a:visited {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-a:active {
-    text-decoration: none;
-}
+
 
 
 
@@ -97,16 +99,9 @@ div#playground-link {
   position:relative;
 }
 #twitterembed{
-  top: -155px;
+  top: -160px;
   right: 0; 
   bottom: 0;
   position: relative;
   float: right;
-}
-
-.w3-panel {
-    margin-top: 16px!important;
-    margin-bottom: 16px!important;
-	margin-left: 16px!important;
-	margin-right: 1250px!important;
 }
