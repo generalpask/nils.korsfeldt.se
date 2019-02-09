@@ -26,7 +26,7 @@ iframe {
 }
 
 #header {
-    width: 50vw;
+    width: 40vw;
 	height: 11vh;
 	position: relative;
 	margin: 10px;
@@ -34,6 +34,7 @@ iframe {
 	/*background-color: #DE5307;*/
     background-color: #0080ff;
     .logo {
+        display: inline;
         margin-top: 3px;
 	    margin-left: 3px;
     }
@@ -57,8 +58,8 @@ iframe {
     }
 }
 .menu-nav {
-    display: inline!important;
-	position: absolute!important;
+    display: inline;
+	position: absolute;
 	left: 116px;
     bottom: 20px;
     .menu-nav-item {
@@ -103,7 +104,6 @@ div {
         bottom: 0;
         position: absolute;
         float: right;
-        float: top;
     }
 }
 #home, #projects, #gallery {
@@ -125,10 +125,16 @@ div {
     #galleries {
         display: block;
         width: 10vw;
+        height: 100vh;
         float: left;
         ul {
             list-style-type: none;
             margin: 2vh 0 0 2vw;
+            cursor: default;
+            a:hover {
+                background-color: lightgrey;
+                transition: 0.5s;
+            }
         }
     }
     #galleryscroller {
@@ -138,11 +144,4 @@ div {
         height: 100vh;
         margin-left: 5vw;
     }
-}
-.gallery-img {
-    width: 100%;
-    margin-bottom: 4vh;
-}
-.skelly-img {
-    width: 24%;
 }
