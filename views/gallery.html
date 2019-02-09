@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../public/stylesheets/main-new.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body class="gallery">
+    <div id="gallery-body">
+        <div id="galleries">
+            <ul>
+                <li><a id="0300h"><i>0300h</i></a></li>
+                <li><a id="samplegallery"><i>samplegallery</i></a></li>
+                <li><a id="skelly"><i>gallery3</i></a></li>
+            </ul>
+        </div>
+        
+        <div id="galleryscroller">
+            <iframe class="galleries-iframe" id="galleries-iframe" marginwidth="0px" marginheight="0px" width="80%" height="100%" frameborder="0" src="../public/galleries/0300h.html"></iframe>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("0300h").addEventListener("click", function() {
+        document.getElementById("galleries-iframe").src="../public/galleries/0300h.html"
+    })
+    document.getElementById("samplegallery").addEventListener("click", function() {
+        document.getElementById("galleries-iframe").src="../public/galleries/samplegallery.html"
+    })
+    document.getElementById("skelly").addEventListener("click", function() {
+        document.getElementById("galleries-iframe").src="../public/galleries/skelly.html"
+    })
+</script>
