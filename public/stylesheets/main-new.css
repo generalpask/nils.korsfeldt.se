@@ -19,7 +19,7 @@ body {
 
 iframe {
   width: 100vw;
-  height: 85vh;
+  height: 65vh;
 }
 
 .vertical-center {
@@ -34,7 +34,7 @@ iframe {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 20vh;
   padding: 5px 5px 5px 5px;
   border-radius: 5px;
   /*background-color: #DE5307;*/
@@ -95,7 +95,7 @@ li a {
   text-decoration: none;
 }
 
-a:link, a:visited, a:hover, a:active {
+a, a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
@@ -162,9 +162,17 @@ div#twitterembed {
   cursor: default;
 }
 
-#gallery-body #galleries ul a:hover {
+#gallery-body #galleries ul a.gallery {
+  border-radius: 2.5px;
+}
+
+#gallery-body #galleries ul a.gallery:hover {
   background-color: lightgrey;
   transition: 0.5s;
+}
+
+#gallery-body #galleries ul a.gallery:active {
+  background-color: lightgrey;
 }
 
 #gallery-body #galleryscroller {
