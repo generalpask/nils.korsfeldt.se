@@ -1,11 +1,11 @@
 (function() {
     document.getElementById("0300h").addEventListener("click", function() {
-        document.getElementById("galleries-iframe").src="../public/galleries/0300h.html"
+        document.getElementById("galleries-iframe").src="/0300h"
     })
     document.getElementById("samplegallery").addEventListener("click", function() {
-        document.getElementById("galleries-iframe").src="../public/galleries/samplegallery.html"
+        document.getElementById("galleries-iframe").src="/samplegallery"
     })
     document.getElementById("skelly").addEventListener("click", function() {
-        document.getElementById("galleries-iframe").src="../public/galleries/skelly.html"
+        document.getElementById("galleries-iframe").src="/skelly"
     })
 }).call(this);

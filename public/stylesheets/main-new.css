@@ -93,14 +93,14 @@ a, a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-div#playground-link {
+div#sandbox-link {
   position: absolute;
-  width: 20px;
+  width: 40px;
   height: 15px;
   -webkit-transform: rotate(-30deg) scale(0.7);
   opacity: 0;
-  left: 75px;
-  top: 65px;
+  left: 67.5px;
+  top: 57.5px;
 }
 
 div#twitterembedparent {
@@ -127,17 +127,17 @@ div.w3-panel p {
   font-family: Verdana,sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  /*
-            b {
-                font-family: Verdana Bold, sans-serif;
-            }
-            */
+}
+
+div.w3-panel p b {
+  font-family: Verdana Bold, sans-serif;
 }
 
 div.w3-panel h1, div.w3-panel h2, div.w3-panel h3, div.w3-panel h4, div.w3-panel h5, div.w3-panel h6 {
   font-family: "Segoe UI",Arial,sans-serif;
   font-weight: 400;
   margin: 10px 0 !important;
+  line-height: 1.1;
 }
 
 p {
