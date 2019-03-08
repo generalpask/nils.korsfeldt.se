@@ -4,7 +4,7 @@
         margin-bottom: 4vh;
     }
 </style>
-
+<!--
 <img class="image" src="../img/galleries/0300h/1.JPG">
 <img class="image" src="../img/galleries/0300h/2.JPG">
 <img class="image" src="../img/galleries/0300h/3.JPG">
@@ -14,3 +14,9 @@
 <img class="image" src="../img/galleries/0300h/7.JPG">
 <img class="image" src="../img/galleries/0300h/8.JPG">
 <img class="image" src="../img/galleries/0300h/9.JPG">
+-->
+
+<% Dir.foreach(File.dirname(__FILE__) + "/../public/img/galleries/0300h") do |file|%>
+<% next if file == "." or file == ".." or file == ".DS_Store"%>
+    <img class = "image" src = "img/galleries/0300h/<%= file %>">
+<% end %>

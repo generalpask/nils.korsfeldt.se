@@ -1,6 +1,6 @@
 (function() {
-    document.getElementById("0300h").addEventListener("click", function() {
-        document.getElementById("galleries-iframe").src="/0300h"
+    document.getElementById("three_am").addEventListener("click", function() {
+        document.getElementById("galleries-iframe").src="/three_am"
     })
     document.getElementById("samplegallery").addEventListener("click", function() {
         document.getElementById("galleries-iframe").src="/samplegallery"

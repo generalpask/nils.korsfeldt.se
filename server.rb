@@ -1,4 +1,6 @@
 require "sinatra"
+set :port, 4567
+
 
 get "/" do
     redirect "/index"
@@ -21,14 +23,19 @@ get "/gallery" do
 end
 
 
-get "/0300h" do
-    send_file "./public/galleries/0300h.html"
+get "/three_am" do
+    erb :three_am
 end
 
 get "/samplegallery" do
-    send_file "./public/galleries/samplegallery.html"
+    send_file "./views/samplegallery.html"
 end
 
 get "/skelly" do
-    send_file "./public/galleries/skelly.html"
+    send_file "./views/skelly.html"
+end
+
+not_found do
+    status 404
+    "you madafaka"
 end
