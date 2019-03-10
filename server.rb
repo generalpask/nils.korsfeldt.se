@@ -41,5 +41,5 @@ end
 
 not_found do
     status 404
-    "you madafaka"
+    send_file "./views/404.html"
 end
