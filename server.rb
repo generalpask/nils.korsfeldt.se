@@ -1,5 +1,6 @@
 require "sinatra"
-set :port, 4567
+set :bind, '0.0.0.0'
+set :port, 80
 
 
 get "/" do
