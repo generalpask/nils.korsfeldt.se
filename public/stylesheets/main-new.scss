@@ -21,7 +21,14 @@ iframe {
 	align-items: center;
 	justify-content: center;
 }
-
+p {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
 #header {
     width: 40vw;
 	height: 11vh;
@@ -91,7 +98,7 @@ div {
         position: absolute;
         width: 40px;
         height: 15px;
-        -webkit-transform: rotate(-30deg) scale(0.7);
+        transform: rotate(-30deg) scale(0.7);
         opacity: 0;
         left: 67.5px;
         top: 57.5px;
@@ -157,7 +164,7 @@ p {
     }
     #galleries {
         display: block;
-        width: 10vw;
+        width: 16vw;
         height: 100vh;
         float: left;
         ul {

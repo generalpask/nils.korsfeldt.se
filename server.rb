@@ -23,17 +23,20 @@ get "/gallery" do
     send_file "./views/gallery.html"
 end
 
-
-get "/three_am" do
-    erb :three_am
-end
-
 get "/samplegallery" do
-    send_file "./views/samplegallery.html"
+    send_file "./views/galleries/samplegallery.html"
 end
 
 get "/skelly" do
-    send_file "./views/skelly.html"
+    send_file "./views/galleries/skelly.html"
+end
+
+get "/remembering" do
+    send_file "./views/galleries/remembering.html"
+end
+
+get "/destination" do 
+    send_file "./views/galleries/destination.html"
 end
 
 not_found do
