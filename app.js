@@ -2,7 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
+
 app.use(express.static(__dirname + '/public/'));
+
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
 
 router.get('/',function(req,res){
     res.redirect('/index');
@@ -34,8 +39,5 @@ router.get('/destination',function(req,res){
     res.sendFile(path.join(__dirname+'/views/galleries/destination.html'));
 });
 
-//add the router
-app.use('/', router);
-app.listen(process.env.port || 3000);
-
-console.log('Running at Port 3000');
+console.log('nils.korsfeldt.se is now active')
+console.log('Running locally at port 3000');
