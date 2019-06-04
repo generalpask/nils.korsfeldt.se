@@ -18,23 +18,17 @@
 }).call(this);
 */
 $.get('/home', function(Data) {
-    document.getElementById('main').innerHTML = Data;
+    document.getElementById('content').innerHTML = Data;
 });
 $('#home').click(function() {
-    $.get('/home', function(Data) {
-        document.getElementById('main').innerHTML = Data;
-    });
+    $('#content').load('/home');
     $("#header").css("margin-top", "20vh");
 });
 $('#projects').click(function() {
-    $.get('/projects', function(Data) {
-        document.getElementById('main').innerHTML = Data;
-    });
+    $('#content').load('/projects');
     $("#header").css("margin-top", "10px");
 });
 $('#gallery').click(function() {
-    $.get('/gallery', function(Data) {
-        document.getElementById('main').innerHTML = Data;
-    });
-    $("#header").css("margin-top", "10px");
+    $('#content').load('/gallery');
+    $("#header").css("top", "10px");
 });

@@ -15,20 +15,22 @@
 }).call(this);
 */
 
-(function loadDefaultGallery() {
-    $.get('/samplegallery', function(Data) {
-        document.getElementById('galleryscroller').innerHTML = Data
-    });
-}).call(this);
+$('#gallery').click(function() {
+    $('#galleryscroller').load("/samplegallery");
+})
 
-$('#samplegallery').click(function () {
-    $.get('/samplegallery', function(Data) {
-        document.getElementById('galleryscroller').innerHTML = Data
-    });
+$('#samplegallery').click(function() {
+    $('#galleryscroller').load("/samplegallery");
 });
 
 $('#skelly').click(function () {
-    $.get('/skelly', function(Data) {
-        document.getElementById('galleryscroller').innerHTML = Data;
-    });
+    $('#galleryscroller').load("/skelly");
+});
+
+$('#remembering').click(function () {
+    $('#galleryscroller').load("/remembering");
+});
+
+$('#destination').click(function () {
+    $('#galleryscroller').load("/destination");
 });

@@ -110,22 +110,16 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         /* Gallery */
-        .galleries-iframe {
-            width: 100%;
-            height: 97.5vh;
-            margin-top: 2.5vh;
-        }
         #gallery-body {
-            overflow: visible;
             width: 100vw;
-            height: 100vh;
+            min-height: 85vh;
             div {
                 display: block;
             }
             #galleries {
                 display: block;
                 width: 16vw;
-                height: 100%;
+                height: auto;
                 float: left;
                 ul {
                     list-style-type: none;
