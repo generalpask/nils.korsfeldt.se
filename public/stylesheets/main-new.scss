@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: row;
     
         box-sizing: border-box;
+
         #sandbox-link {
             position: absolute;
             width: 40px;
@@ -69,10 +70,16 @@ h1, h2, h3, h4, h5, h6 {
                 margin: 0.5vh 0 0 0.5vh;
                 .menu-nav-item {
                     color: black;
+                    cursor: pointer;
                     &:hover {
                         /*background-color: #af4003;*/
                         background-color: #0068d1;
                     }
+                }
+                a:nth-child(4), a:nth-child(5) {
+                    color: red;
+                    text-decoration: line-through;
+
                 }
             }
         }
@@ -126,13 +133,24 @@ h1, h2, h3, h4, h5, h6 {
                     margin: 2vh 0 0 2vw;
                     cursor: default;
                     a.gallery {
+                        display: block;
+                        border-radius: 2.5px;
+                        padding: 8px 16px;
+                        color: #000;
+
                         font-family: Verdana,sans-serif;
                         font-size: 15px;
                         line-height: 1.5;
-                        border-radius: 2.5px;
+                        text-decoration: none;
+                        font-style: italic;
+                        cursor: pointer;
+
+                        background-color: inherit;
+                        transition: background-color 0.5s;
+
                         &:hover {
                             background-color: lightgrey;
-                            transition: 0.5s;
+                            transition: background-color 0.5s;
                         }
                         &:active {
                             background-color: lightgrey;
@@ -157,26 +175,4 @@ h1, h2, h3, h4, h5, h6 {
 ul#horizontal-list li {
     display: inline;
 }
-
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-a, a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-}
-
-div {
-    
-}
-
-#home, #projects, #gallery {
-    cursor: pointer;
-}
-
-
-
 

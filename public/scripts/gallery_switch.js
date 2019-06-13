@@ -15,10 +15,7 @@
 }).call(this);
 */
 
-$('#gallery').click(function() {
-    $('#galleryscroller').load("/samplegallery");
-})
-
+/* OLD CODE
 $('#samplegallery').click(function() {
     $('#galleryscroller').load("/samplegallery");
 });
@@ -34,3 +31,14 @@ $('#remembering').click(function () {
 $('#destination').click(function () {
     $('#galleryscroller').load("/destination");
 });
+*/
+
+var galleries = document.getElementsByTagName('a');
+for (var i = 0; i < galleries.length; i++) {
+    console.log(galleries[i]);
+    $(galleries[i]).click(function() {
+        var id = $(this).attr('id');
+        console.log(id);
+        $('#galleryscroller').load("/"+id)
+    })
+}
