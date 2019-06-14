@@ -17,18 +17,26 @@
     });
 }).call(this);
 */
+/* OLD CODE
 $.get('/home', function(Data) {
     document.getElementById('content').innerHTML = Data;
 });
 $('#home').click(function() {
     $('#content').load('/home');
-    $("#header").css("margin-top", "20vh");
 });
 $('#projects').click(function() {
     $('#content').load('/projects');
-    $("#header").css("margin-top", "10px");
 });
 $('#gallery').click(function() {
     $('#content').load('/gallery');
     $("#header").css("top", "10px");
+});
+*/
+$.get('/home', function() {
+    $('#content').load('/home');
+});
+
+$('.menu-nav').on('click', '*', function() {
+    var pageid = $(this).attr('id');
+    $('#content').load('/'+pageid);
 });

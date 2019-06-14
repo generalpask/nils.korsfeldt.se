@@ -33,12 +33,14 @@ $('#destination').click(function () {
 });
 */
 
-var galleries = document.getElementsByTagName('a');
+$.get('/gallery', function() {
+    $('#galleryscroller').load('/samplegallery');
+});
+
+var galleries = $('a');
 for (var i = 0; i < galleries.length; i++) {
-    console.log(galleries[i]);
     $(galleries[i]).click(function() {
         var id = $(this).attr('id');
-        console.log(id);
-        $('#galleryscroller').load("/"+id)
-    })
+        $('#galleryscroller').load('/'+id);
+    });
 }
