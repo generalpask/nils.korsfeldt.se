@@ -93,15 +93,23 @@ h1, h2, h3, h4, h5, h6 {
 .main .content {
   width: 100%;
   height: auto;
-  /* Home */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  /* Home/Projects */
   /* Gallery */
 }
 
 .main .content div.w3-panel {
-  margin-left: auto;
-  margin-right: auto;
   width: 30%;
   border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.main .content div.w3-panel a {
+  text-decoration: none;
 }
 
 .main .content div.w3-panel p {
@@ -126,10 +134,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 16px;
 }
 
 .main .content #gallery-body {
-  width: 100vw;
+  width: 100%;
   min-height: 85vh;
 }
 
@@ -139,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main .content #gallery-body #galleries {
   display: block;
-  width: 16vw;
+  width: 16%;
   height: auto;
   float: left;
 }
@@ -170,16 +179,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.5s;
 }
 
-.main .content #gallery-body #galleries ul a.gallery:active {
-  background-color: lightgrey;
-}
-
 .main .content #gallery-body #galleryscroller {
   display: block;
-  width: 70vw;
+  width: 70%;
   float: left;
   height: 100%;
-  margin-left: 5vw;
+  margin-left: 5%;
 }
 
 ul#horizontal-list li {
