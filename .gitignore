@@ -1,3 +1,4 @@
 nils.korsfeldt.se.code-workspace
 public/stylesheets/main-new.min.css
 public/scripts/threejs/three.js
+node_modules/
