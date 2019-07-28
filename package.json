@@ -1,9 +1,8 @@
 {
-    "name": "htmlRender",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "name": "nils.korsfeldt.se",
+    "main": "app.js",
     "scripts": {
+        "start": "node app.js",
         "test": "echo 'Error: no test specified' &amp;&amp; exit 1"
     },
     "keywords": [],
