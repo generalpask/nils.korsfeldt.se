@@ -34,7 +34,7 @@ $('#destination').click(function () {
 */
 
 $.get('/gallery', function() {
-    $('#galleryscroller').load('/samplegallery');
+    $('#galleryscroller').load('/remembering');
 });
 
 var galleries = $('a');
