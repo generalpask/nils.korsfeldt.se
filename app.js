@@ -5,7 +5,6 @@ const router = express.Router();
 
 app.use(express.static(__dirname + '/public/'));
 
-//add the router
 app.use('/', router);
 app.listen(process.env.port || 3000);
 
